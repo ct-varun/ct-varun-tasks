@@ -5,7 +5,7 @@ $(".submit").click(function () {
     var firstName = $("#first_name").val();
     var lastName = $("#last_name").val();
     var mNumber = $("#m_number").val();
-    alert(firstName);
+    //alert(firstName);
     $.ajax({
         url: 'result.php',
         type: 'POST',
