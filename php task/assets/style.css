@@ -1,0 +1,25 @@
+* {
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+form {
+    width: 270px;
+    padding: 10px;
+    background-color: green;
+    opacity: 0.9;
+    border: 4px solid black;
+    box-shadow: 0 0 5px green;
+    border-radius: 8px;
+    color: white;
+}
+
+.form-div {
+    width: 500px;
+    height: 1000px;
+    margin: auto;
+}
