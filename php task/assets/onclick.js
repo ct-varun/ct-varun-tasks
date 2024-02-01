@@ -1,6 +1,3 @@
-// $('form').submit(function (event) {
-//     event.preventDefault();
-
 $(".submit").click(function () {
     var firstName = $("#first_name").val();
     var lastName = $("#last_name").val();
