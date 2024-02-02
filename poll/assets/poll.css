@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.943);
+}
+
+.poll-section-container {
+    width: 37%;
+    margin: auto;
+    margin-top: 200px;
+    padding: 15px;
+    /* border-radius: 1%; */
+    background-color: rgba(245, 245, 220, 0.99);
+    box-shadow: 0 0 0 5px rgba(78, 115, 220, 0.831);
+}
+
+form,
+h1 {
+    padding-left: 5%;
+}
