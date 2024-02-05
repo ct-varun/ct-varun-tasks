@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $("#submit").click(function (e) {
         e.preventDefault();
@@ -29,4 +28,21 @@ $(document).ready(function () {
             }
         });
     });
+    $(".delete").click(function (e) {
+        e.preventDefault();
+        var container = $(this).closest(".display-container");
+        var id_value = $(this).siblings(".get-id").val();
+        //alert(id_value);
+        $.ajax({
+            type: 'post',
+            url: 'delete.php',
+            data: { idval: id_value },
+            success: function (response) {
+                alert(response);
+                container.remove();
+            }
+
+        });
+    });
+
 });

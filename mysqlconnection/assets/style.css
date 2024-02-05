@@ -16,7 +16,17 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+.display-container {
+    width: 100%;
+    padding: 10px;
+    padding-left: 111px;
+}
+
 input {
+    cursor: pointer;
+}
+
+#myForm input {
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;

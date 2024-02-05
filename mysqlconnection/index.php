@@ -29,13 +29,21 @@
 
 <?php
        
-       $sql = "SELECT firstnamec, middlenamec, lastnamec, imagec FROM forminfo";
+       $sql = "SELECT * FROM forminfo";
        $result = mysqli_query($conn, $sql);
        
        if (mysqli_num_rows($result) > 0) {
            while ($row = mysqli_fetch_assoc($result)) {
-               echo "First name: " . $row["firstnamec"] . ",   Middle name: " . $row["middlenamec"] . ",   Last name: " . $row['lastnamec'] . "<br>";
-               echo "<img src='assets/uploads/" . $row['imagec'] . "' alt='Uploaded Image' height='50px' width='50px'><br>";
+            echo "<div class='display-container'>";
+            echo "<form>";
+               echo "First name: " . $row["firstnamec"] . "<br>";
+               echo "middle name: " . $row["middlenamec"] . "<br>";
+               echo "last name: " . $row["lastnamec"] . "<br>";
+               echo "<img src='assets/uploads/" . $row['imagec'] . "' alt='no upload' height='50px' width='50px'><br>";
+               echo "<input type='hidden' class='get-id' value='" . $row['id'] . "'><br>";
+               echo "<input type='submit' value='delete' class='delete'> <br><br><br>";
+               echo "</div>";
+               echo "</form>";
            }
        } else {
            echo "No result";
