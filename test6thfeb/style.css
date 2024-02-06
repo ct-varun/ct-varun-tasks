@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coustard&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    max-width: 1920px;
+    margin: auto;
+}
+
+.primary-button {
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Outfit', sans-serif;
+    background-color: #FA6702;
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: white;
+    color: #FA6702;
+}
+
+nav p {
+    text-align: center;
+    background-color: #37AE47;
+    color: white;
+    padding: 15px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 70px 15px 70px;
+    align-items: center;
+}
+
+nav a {
+    padding: 18px 33px 18px 33px;
+}
+
+header {
+    border-top: 18px solid #ffffff;
+}
+
+.giftcard {
+    width: 18px;
+    height: 18px;
+}
+
+.banner-container {
+    max-width: 1920px;
+    background-color: #37AE47;
+    position: relative;
+    padding: 100px 700px 500px 70px;
+}
+
+.banner-container-text {
+    max-width: 727px;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.free-shipping {
+    display: inline;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #ffffff21;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+
+.banner-container-text h2 {
+    font-family: 'Coustard', serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.image-in-shop-now {
+    margin-top: 15px;
+    padding-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.banner-container-text a {
+    padding: 11px 11px 11px 33px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* display: flex;
+    align-items: Center; */
+}
+
+.banner-container-text p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Outfit', sans-serif;
+    opacity: 70%;
+}
+
+.circle-behind-dog {
+    position: absolute;
+    top: 115px;
+    left: 1100px;
+}
+
+.circle-behind-dog img {
+    width:
+        542.45px;
+    height:
+        543.93px;
+}
+
+.food {
+    position: absolute;
+    top: 395px;
+    left: 950px;
+    z-index: 1;
+}
+
+.food img {
+    width: 308px;
+    height: 311px;
+}
+
+.dog {
+    position: absolute;
+    top: 59px;
+    left: 1000px;
+    z-index: 2;
+
+}
+
+.dog img {
+    width: 608px;
+    height: 731px;
+}
+
+.footer-section-container {
+    max-width: 1370px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+
+}
+
+.footer-section-container div {
+    border-left: 1px solid rgb(228, 222, 222);
+    padding: 15px;
+    padding-left: 30px;
+}
