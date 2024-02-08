@@ -31,7 +31,7 @@ form * {
     margin: 10px auto;
 }
 
-#myform input {
+input {
     width: 70%;
     padding: 15px;
     margin-left: 15%;
@@ -55,4 +55,14 @@ input[type="submit"]:hover {
 
 .content-admin {
     height: 100px;
+}
+
+.image-label {
+    display: inline;
+    padding: 10px;
+}
+
+.uploadfilebutton {
+    width: 145px;
+    overflow: hidden;
 }

@@ -26,11 +26,13 @@ if (mysqli_num_rows($result) > 0) {
             <label for="heading">heading</label>
             <input type="text" name="heading" id="heading" value="<?php echo $row['headingc']; ?>">
             <label for="content">content </label>
-            <textarea> </textarea>
-            <!-- <input type="text" name="content" id="content" class="content-admin"
-                value="<?php echo $row['contentc']; ?>"> -->
-            <input type="file" name="upload_file" id="upload_file" required>
-            <input type="submit" value="insert" id="admin-submit">
+            <input type="text" name="content" id="content" class="content-admin"
+                value="<?php echo $row['contentc']; ?>">
+            <input type="file" name="upload_file" id="upload_file" accept="image/*" class="uploadfilebutton">
+            <label for="" id="upload_file" class="image-label">
+                <?php echo $row['imagec']; ?>
+            </label>
+            <input type="submit" value="submit" id="admin-submit">
         </form>
     </div>
 </body>

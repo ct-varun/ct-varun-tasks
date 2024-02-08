@@ -22,10 +22,12 @@ include 'database.php';
             <label for="lastname">lastname </label>
             <input type="text" name="lastname" id="lastname">
             <label for="password">password </label>
-            <input type="text" name="password" id="password" pattern="(?=.*[A-Z])[a-zA-Z0-9]{8,}">
+            <input type="password" name="password" id="password" pattern="(?=.*[A-Z])[a-zA-Z0-9]{8,}">
             <label for="confirmpassword">confirm password </label>
-            <input type="text" name="confirmpassword" id="confirm-password" pattern="(?=.*[A-Z])[a-zA-Z0-9]{8,}">
+            <input type="password" name="confirmpassword" id="confirm-password" pattern="(?=.*[A-Z])[a-zA-Z0-9]{8,}">
             <input type="submit" value="submit the details" id="signup-button">
+            <input type="reset">
+            <input type="submit" value="login" id="signup-login">
         </form>
     </div>
 </body>

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#login-signup-button").click(function (e) {
         e.preventDefault();
-        window.open("signup.php");
+        window.location.href = "signup.php";
     });
     $("#admin-submit").click(function (e) {
         e.preventDefault();
@@ -42,7 +42,7 @@ $(document).ready(function () {
             success: function (response) {
                 // alert(response);
                 if (response == "1") {
-                    window.open("admin.php");
+                    window.location.href = "admin.php";
                 }
                 else {
                     alert("signup first");
@@ -75,11 +75,16 @@ $(document).ready(function () {
                 success: function (response) {
                     alert(response);
                     if (response == "inserted the details") {
-                        window.open("index.php");
+                        window.location.href = "index.php";
                     }
                 }
 
             });
         }
     });
+    $("#signup-login").click(function (e) {
+        e.preventDefault();
+        window.location.href = "index.php";
+    });
+
 });

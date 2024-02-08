@@ -49,7 +49,7 @@
            echo "No result";
        }
        
-       
+        q
 ?>
 
 </body>

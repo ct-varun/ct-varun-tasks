@@ -19,7 +19,7 @@ $flag=0;
                 if($first_name==$row["firstnamec"] && $middle_name==$row["middlenamec"] && $last_name==$row["lastnamec"] && $file_name==$row["imagec"])
                 {
                     $flag=1;
-                    echo "same record found";
+                    //echo "same record found";
                 }
             } 
         if($flag==1)
