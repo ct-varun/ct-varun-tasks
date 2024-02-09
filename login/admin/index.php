@@ -1,5 +1,18 @@
 <?php
 include 'database.php';
+// if (isset($_COOKIE["bool"])) {
+//     if ($_COOKIE["bool"] == 1) {
+//         header("location: admin.php");
+//         exit();
+//     }
+// }
+session_start();
+if (isset($_SESSION["bool"])) {
+    if ($_SESSION["bool"] == 1) {
+        header("location:admin.php");
+        exit();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

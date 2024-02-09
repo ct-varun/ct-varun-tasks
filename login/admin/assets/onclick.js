@@ -3,6 +3,18 @@ $(document).ready(function () {
         e.preventDefault();
         window.location.href = "signup.php";
     });
+    $("#admin-logout").click(function (e) {
+        $.ajax({
+            url: 'logout.php',
+            type: 'post',
+            success: function (response) {
+                // alert(response);
+                if (response == 1) {
+                    window.location.href = "index.php";
+                }
+            }
+        });
+    });
     $("#admin-submit").click(function (e) {
         e.preventDefault();
         var heading = $("#heading").val();

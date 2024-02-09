@@ -8,7 +8,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "<div style='max-width:1280px; margin:auto;'>";
     echo "<h1>" . $row["headingc"] . "</h1> <br>";
     echo "<p>" . $row["contentc"] . "</P> <br>";
-    echo "<img src='admin/assets/uploads/" . $row['imagec'] . "' alt='no upload' width='100%'> <br>";
+    echo "<img src='admin/assets/uploads/" . $row['imagec'] . "' alt='no upload' width='30%vw' height='70%vh'><br>";
     echo "</div>";
 } else {
     echo "No result";

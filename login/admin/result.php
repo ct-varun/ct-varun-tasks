@@ -1,4 +1,11 @@
 <?php
+session_start();
+// if (!isset($_COOKIE["bool"])) {
+//     setcookie("bool", "0", time() + 86400 * 30, "/");
+// }
+if (!isset($_SESSION["bool"])) {
+    $_SESSION["bool"] = 0;
+}
 include 'database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username1'];
@@ -16,11 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "no record present";
     }
     if ($flag == 1) {
+        // setcookie("bool", "1", time() + 86400 * 30, "/");
+        $_SESSION["bool"] = 1;
         echo "1";
     } else {
         echo "0";
     }
-
-
 }
 ?>

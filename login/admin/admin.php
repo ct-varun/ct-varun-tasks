@@ -33,6 +33,7 @@ if (mysqli_num_rows($result) > 0) {
                 <?php echo $row['imagec']; ?>
             </label>
             <input type="submit" value="submit" id="admin-submit">
+            <input type="submit" value="logout" id="admin-logout">
         </form>
     </div>
 </body>
