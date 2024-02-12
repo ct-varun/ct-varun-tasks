@@ -118,8 +118,8 @@ nav img {
 .banner-section-text {
     max-width: 586px;
     position: absolute;
-    top: 192px;
-    bottom: 152px;
+    top: 224px;
+    bottom: 184px;
     left: 347px;
     display: flex;
     flex-direction: column;
