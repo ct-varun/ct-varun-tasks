@@ -75,23 +75,28 @@ $(document).ready(function () {
             alert("passwords do not match");
         }
         else {
-            $.ajax({
-                type: 'POST',
-                url: 'signupinsert.php',
-                data: {
-                    username1: usernamenew,
-                    password1: passwordnew
-                },
-                // contentType: 'application/json',
-                // processData: false,
-                success: function (response) {
-                    alert(response);
-                    if (response == "inserted the details") {
-                        window.location.href = "index.php";
+            if (firstname && lastname && passwordnew && usernamenew) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'signupinsert.php',
+                    data: {
+                        username1: usernamenew,
+                        password1: passwordnew
+                    },
+                    // contentType: 'application/json',
+                    // processData: false,
+                    success: function (response) {
+                        alert(response);
+                        if (response == "inserted the details") {
+                            window.location.href = "index.php";
+                        }
                     }
-                }
 
-            });
+                });
+            }
+            else {
+                alert("incomplete");
+            }
         }
     });
     $("#signup-login").click(function (e) {

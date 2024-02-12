@@ -6,6 +6,9 @@ session_start();
 if (!isset($_SESSION["bool"])) {
     $_SESSION["bool"] = 0;
 }
+if (!isset($_SESSION["username"])) {
+    $_SESSION["username"] = "fail";
+}
 include 'database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username1'];
@@ -25,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($flag == 1) {
         // setcookie("bool", "1", time() + 86400 * 30, "/");
         $_SESSION["bool"] = 1;
+        $_SESSION["username"] = $username;
         echo "1";
     } else {
         echo "0";
