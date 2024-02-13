@@ -63,11 +63,8 @@ input[type="submit"]:hover {
 
 .uploadfilebutton {
     overflow: hidden;
-}
-
-input[type="radio"] {
-    margin: 0;
-    padding: 0;
+    color: transparent;
+    width: 155px;
 }
 
 .logoimage {

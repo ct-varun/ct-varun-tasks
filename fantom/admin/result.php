@@ -78,6 +78,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "data not inserted with image";
             }
+        } else if ($_POST['uploadimage'] != null) {
+            $menuitem1 = $_POST['mi1'];
+            $menuitem2 = $_POST['mi2'];
+            $menuitem3 = $_POST['mi3'];
+            $menuitem4 = $_POST['mi4'];
+            $menuitem5 = $_POST['mi5'];
+            $heading = $_POST['heading'];
+            $paragraph = $_POST['paragraph'];
+            $button = $_POST['button'];
+            $file_name = $_POST['uploadimage'];
+            if (isset($_FILES['backgroundimage'])) {
+                $file_nameb = $_FILES['backgroundimage']['name'];
+                $file_tmpb = $_FILES['backgroundimage']['tmp_name'];
+                move_uploaded_file($file_tmpb, "assets/uploads/" . $file_nameb);
+            }
+            $sql1 = "INSERT INTO fantom_input (imagec,textforlogoc, menuitem1c, menuitem2c, menuitem3c, menuitem4c, menuitem5c, headingc, paragraphc, buttonc, backgroundimagec) VALUES('$file_name','null',$menuitem1','$menuitem2','$menuitem3','$menuitem4','$menuitem5','$heading','$paragraph','$button','$file_nameb')";
+            echo "$sql1";
+            if (mysqli_query($conn, $sql1)) {
+                echo "data inserted with image";
+            } else {
+                echo "data not inserted with image";
+            }
+
+
         } else {
             $textforlogo = $_POST['textinlogo'];
             $menuitem1 = $_POST['mi1'];
