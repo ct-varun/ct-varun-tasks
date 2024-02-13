@@ -42,7 +42,7 @@ p {
 
 a:hover {
     cursor: pointer;
-    color: black;
+    color: lightblue;
 }
 
 .container {
@@ -235,8 +235,9 @@ nav img {
 }
 
 .powerfultools-section-container a {
+    position: relative;
     display: flex;
-    padding: 8px 0px 8px 0px;
+    padding: 8px 50px 8px 0px;
     align-items: center;
     justify-content: right;
     Font-family:
@@ -254,4 +255,50 @@ nav img {
 .card-image {
     position: absolute;
     top: 474px;
+}
+
+@keyframes arrowanimation {
+    from {
+        left: 500px;
+        top: 12px;
+    }
+
+    to {
+        left: 510px;
+        top: 12px;
+    }
+}
+
+.arrow-image {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 500px;
+    /* animation: arrowanimation 1s; */
+}
+
+/* .arrow-image:hover {
+    animation: arrowanimation 0.1s ease-in-out 0s;
+    animation-fill-mode: forwards;
+} */
+
+.learn-more-div {
+    position: absolute;
+    color: white;
+    padding-left: 25px;
+    left: 480px;
+    top: 10px;
+    opacity: 0;
+}
+
+.learn-more:hover {
+
+    .arrow-image {
+        animation: arrowanimation 0.1s ease-in-out 0s;
+        animation-fill-mode: forwards;
+    }
+
+    .learn-more-div {
+        opacity: 1;
+    }
 }
