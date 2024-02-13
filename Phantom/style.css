@@ -172,7 +172,6 @@ nav img {
     /* gap: 24px; */
     padding-top: 120px;
     padding-bottom: 1084px;
-    background-color: black;
     align-items: center;
     justify-content: space-between;
 }
@@ -252,9 +251,7 @@ nav img {
         -0.25px;
 }
 
-
-
-.powerfultools-section-container img {
+.card-image {
     position: absolute;
     top: 474px;
 }
