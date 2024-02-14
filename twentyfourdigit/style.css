@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #141412;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #141412;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.2px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+h1 {
+    font-weight: 700;
+    font-Size: 80px;
+    line-height: 113.6pxpx;
+    letter-spacing: -2px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30.6px;
+    color: #00000099;
+}
+
+
+a:hover {
+    cursor: pointer;
+    color: #66A500;
+}
+
+.container {
+    max-width: 1426px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+
+nav ul {
+    display: flex;
+    width: 540px;
+    padding: 0;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.primary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 42px 17px 42px;
+    border-radius: 28px;
+    background-color: #66A500;
+}
+
+.primary-button:hover {
+    background-color: white;
+    color: #66A500;
+}
+
+.arrow-image {
+    margin-left: 15px;
+}
+
+.banner-section-container {
+    position: relative;
+    padding-top: 82px;
+    display: flex;
+}
+
+.banner-text-container {
+    width: 759px;
+    padding-top: 40px;
+}
+
+.banner-text-container h5 {
+    position: relative;
+    padding-bottom: 29px;
+}
+
+.line-before::before {
+    content: "";
+    width: 66px;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    color: #000000;
+}
+
+.banner-text-container a {
+    margin-right: 500px;
+}
+
+.banner-image {
+    width: 921px;
+    z-index: 2;
+}
+
+.banner-text-container h1 {
+    width: 729px;
+    padding-bottom: 31px;
+}
+
+.banner-text-container p {
+    padding-bottom: 56px;
+}
+
+.banner-image-green {
+    position: absolute;
+    right: 0;
+    bottom: -55px;
+    z-index: 1;
+
+}
