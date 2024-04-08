@@ -11,6 +11,7 @@ window.onload = function () {
     { id: 10, title: "call it courage", author: "armstrong_perry", pages: 1, isRead: true }];
 
     document.getElementById("display-all-books-btn").onclick = function () {
+        console.clear();
         for (let item of bookStore) {
             console.log(item);
         }
@@ -111,13 +112,22 @@ window.onload = function () {
     }
 
     function readToggle(bookid, books) {
-        if (books.find((item) => item.id == bookid).isRead) {
-            books.find((item) => item.id == bookid).isRead = false;
-            console.log("changed to unread");
+        let count = 0;
+        for (let item of books) {
+            if (item.id == bookid) count++;
+        }
+        if (count) {
+            if (books.find((item) => item.id == bookid).isRead) {
+                books.find((item) => item.id == bookid).isRead = false;
+                console.log("changed to unread");
+            }
+            else {
+                books.find((item) => item.id == bookid).isRead = true;
+                console.log("changed to read");
+            }
         }
         else {
-            books.find((item) => item.id == bookid).isRead = true;
-            console.log("changed to read");
+            console.log("error check id of book");
         }
     }
 
@@ -130,27 +140,40 @@ window.onload = function () {
         book = {};
         book.id = prompt("Enter the book id");
         book.id = checkNumber(book.id);
-        book.title = prompt("Enter the book title");
-        book.title = checkString(book.title);
-        book.author = prompt("Enter the author");
-        book.author = checkString(book.author);
-        book.pages = prompt("Enter the number of pages in the book");
-        book.pages = checkNumber(book.pages);
-        book.isRead = false;
         let flag = 0;
         for (let item of bookStore) {
             if (item.id == book.id) {
                 flag = 1;
             }
         }
+        if (flag) {
+            console.log("error check id of book");
+            return;
+        }
+        book.title = prompt("Enter the book title");
+        book.title = checkString(book.title);
+        if (book.title == undefined) {
+            flag = 1;
+        }
+        book.author = prompt("Enter the author");
+        book.author = checkString(book.author);
+        if (book.author == undefined) {
+            flag = 1;
+        }
+        book.pages = prompt("Enter the number of pages in the book");
+        book.pages = checkNumber(book.pages);
+        if (book.pages == undefined) {
+            flag = 1;
+        }
+        book.isRead = prompt("Enter true if the book is read otherwise enter false");
+        book.isRead = checkBoolean(book.isRead);
+        if (book.isRead == undefined) {
+            flag = 1;
+        }
         if (!flag) {
             bookStore.push(book);
             console.log("success");
         }
-        else {
-            console.log("some error occured check the book id");
-        }
-
     }
 
     function removeBook(removeId, books) {
@@ -163,7 +186,6 @@ window.onload = function () {
         if (count) {
             const newBooks = books.filter((item) => item.id != removeId);//using filter but creates a new array
             bookStore = newBooks;
-
             console.log("success");
             // books.splice(books.findIndex((item) => {//using splice to remove elements from the real array
             //     return item.id == removeId;
@@ -205,6 +227,25 @@ window.onload = function () {
         }
         return str;
     }
+
+    function checkBoolean(bool) {
+        while (bool != 'true' && bool != 'false') {
+            if (bool == null) {
+                console.log("thank you");
+                return;
+            }
+            bool = prompt("Enter true or false only");
+        }
+        if (bool == 'true') {
+            bool = true;
+        }
+        if (bool == 'false') {
+            bool = false;
+        }
+        return bool;
+    }
+
+
     document.getElementById("display-book-btn").onclick = function () {
         console.clear();
         let res;
