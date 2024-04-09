@@ -21,6 +21,10 @@
 #sort-books-btn,
 #add-book-btn,
 #remove-book-btn,
+#short-books,
+#reverse-values,
+#edit-a-book,
+#add-published-date,
 #display-all-books-btn {
     width: 25%;
     margin: auto;
@@ -42,8 +46,12 @@
 #sort-books-btn:hover,
 #display-book-btn:hover,
 #add-book-btn:hover,
+#short-books:hover,
+#reverse-values:hover,
 #remove-book-btn:hover,
-#display-all-books-btn:hover {
+#display-all-books-btn:hover,
+#add-published-date:hover,
+#edit-a-book:hover {
     background-color: #ffffff;
     color: #111111;
 }
